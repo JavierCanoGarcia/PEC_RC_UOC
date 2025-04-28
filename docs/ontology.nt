@@ -1,0 +1,427 @@
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+_:genid1 <http://www.w3.org/2000/01/rdf-schema#comment> "Esta ontología modela información relacionada con eventos turísticos, hoteles, atracciones y restaurantes en distintas ciudades. Su objetivo de carácter didáctico es representar de manera estructurada los datos necesarios para sistemas de recomendación en el ámbito del turismo inteligente como parte del trabajo del alumno Javier Caño García en la asignatura Representación del conocimiento." .
+_:genid1 <http://www.w3.org/2000/01/rdf-schema#label> "SmartTourismRecommendationOntology" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://example.org/smart-tourism#hasAttraction
+<http://example.org/smart-tourism#hasAttraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/smart-tourism#hasAttraction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/smart-tourism#City> .
+<http://example.org/smart-tourism#hasAttraction> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/smart-tourism#Attraction> .
+<http://example.org/smart-tourism#hasAttraction> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a city has an attraction."@en .
+<http://example.org/smart-tourism#hasAttraction> <http://www.w3.org/2000/01/rdf-schema#label> "hasAttraction"@en .
+# 
+# http://example.org/smart-tourism#locatedIn
+<http://example.org/smart-tourism#locatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/smart-tourism#locatedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/smart-tourism#Hotel> .
+<http://example.org/smart-tourism#locatedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/smart-tourism#City> .
+<http://example.org/smart-tourism#locatedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that an entity is located in a city."@en .
+<http://example.org/smart-tourism#locatedIn> <http://www.w3.org/2000/01/rdf-schema#label> "locatedIn"@en .
+# 
+# http://www.co-ode.org/ontologies/ont.owl#hasCuisineType
+<http://www.co-ode.org/ontologies/ont.owl#hasCuisineType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.co-ode.org/ontologies/ont.owl#hasCuisineType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/smart-tourism#Restaurant> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://example.org/smart-tourism#hasPricePerNight
+<http://example.org/smart-tourism#hasPricePerNight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/smart-tourism#hasPricePerNight> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/smart-tourism#Hotel> .
+<http://example.org/smart-tourism#hasPricePerNight> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://example.org/smart-tourism#hasPricePerNight> <http://www.w3.org/2000/01/rdf-schema#comment> "Price per night for a hotel."@en .
+<http://example.org/smart-tourism#hasPricePerNight> <http://www.w3.org/2000/01/rdf-schema#label> "hasPricePerNight"@en .
+# 
+# http://example.org/smart-tourism#hasRating
+<http://example.org/smart-tourism#hasRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/smart-tourism#hasRating> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/smart-tourism#Hotel> .
+<http://example.org/smart-tourism#hasRating> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://example.org/smart-tourism#hasRating> <http://www.w3.org/2000/01/rdf-schema#comment> "The rating of a hotel."@en .
+<http://example.org/smart-tourism#hasRating> <http://www.w3.org/2000/01/rdf-schema#label> "hasRating"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://example.org/smart-tourism#Accommodation
+<http://example.org/smart-tourism#Accommodation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/smart-tourism#Accommodation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/smart-tourism#Hotel> .
+<http://example.org/smart-tourism#Accommodation> <http://www.w3.org/2000/01/rdf-schema#comment> "Class representing accommodation."@en .
+<http://example.org/smart-tourism#Accommodation> <http://www.w3.org/2000/01/rdf-schema#label> "Accommodation"@en .
+# 
+# http://example.org/smart-tourism#Attraction
+<http://example.org/smart-tourism#Attraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/smart-tourism#Attraction> <http://www.w3.org/2000/01/rdf-schema#comment> "Class representing attraction."@en .
+<http://example.org/smart-tourism#Attraction> <http://www.w3.org/2000/01/rdf-schema#label> "Attraction"@en .
+# 
+# http://example.org/smart-tourism#City
+<http://example.org/smart-tourism#City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/smart-tourism#City> <http://www.w3.org/2000/01/rdf-schema#comment> "Class representing city."@en .
+<http://example.org/smart-tourism#City> <http://www.w3.org/2000/01/rdf-schema#label> "City"@en .
+# 
+# http://example.org/smart-tourism#CuisineType
+<http://example.org/smart-tourism#CuisineType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/smart-tourism#CuisineType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/smart-tourism#Restaurant> .
+<http://example.org/smart-tourism#CuisineType> <http://www.w3.org/2000/01/rdf-schema#comment> "Class representing cuisinetype."@en .
+<http://example.org/smart-tourism#CuisineType> <http://www.w3.org/2000/01/rdf-schema#label> "CuisineType"@en .
+# 
+# http://example.org/smart-tourism#Date
+<http://example.org/smart-tourism#Date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/smart-tourism#Date> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/smart-tourism#Event> .
+<http://example.org/smart-tourism#Date> <http://www.w3.org/2000/01/rdf-schema#comment> "Class representing date."@en .
+<http://example.org/smart-tourism#Date> <http://www.w3.org/2000/01/rdf-schema#label> "Date"@en .
+# 
+# http://example.org/smart-tourism#Distance
+<http://example.org/smart-tourism#Distance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/smart-tourism#Distance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/smart-tourism#Transport> .
+<http://example.org/smart-tourism#Distance> <http://www.w3.org/2000/01/rdf-schema#comment> "Class representing distance."@en .
+<http://example.org/smart-tourism#Distance> <http://www.w3.org/2000/01/rdf-schema#label> "Distance"@en .
+# 
+# http://example.org/smart-tourism#Event
+<http://example.org/smart-tourism#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/smart-tourism#Event> <http://www.w3.org/2000/01/rdf-schema#comment> "Class representing event."@en .
+<http://example.org/smart-tourism#Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event"@en .
+# 
+# http://example.org/smart-tourism#EventType
+<http://example.org/smart-tourism#EventType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/smart-tourism#EventType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/smart-tourism#Event> .
+<http://example.org/smart-tourism#EventType> <http://www.w3.org/2000/01/rdf-schema#comment> "Class representing eventtype."@en .
+<http://example.org/smart-tourism#EventType> <http://www.w3.org/2000/01/rdf-schema#label> "EventType"@en .
+# 
+# http://example.org/smart-tourism#FoodEstablishment
+<http://example.org/smart-tourism#FoodEstablishment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/smart-tourism#FoodEstablishment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/smart-tourism#Hotel> .
+<http://example.org/smart-tourism#FoodEstablishment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/smart-tourism#Restaurant> .
+<http://example.org/smart-tourism#FoodEstablishment> <http://www.w3.org/2000/01/rdf-schema#comment> "Class representing foodestablishment."@en .
+<http://example.org/smart-tourism#FoodEstablishment> <http://www.w3.org/2000/01/rdf-schema#label> "FoodEstablishment"@en .
+# 
+# http://example.org/smart-tourism#Hotel
+<http://example.org/smart-tourism#Hotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/smart-tourism#Hotel> <http://www.w3.org/2000/01/rdf-schema#comment> "Class representing hotel."@en .
+<http://example.org/smart-tourism#Hotel> <http://www.w3.org/2000/01/rdf-schema#label> "Hotel"@en .
+# 
+# http://example.org/smart-tourism#Location
+<http://example.org/smart-tourism#Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/smart-tourism#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/smart-tourism#Attraction> .
+<http://example.org/smart-tourism#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/smart-tourism#City> .
+<http://example.org/smart-tourism#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/smart-tourism#Event> .
+<http://example.org/smart-tourism#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/smart-tourism#Hotel> .
+<http://example.org/smart-tourism#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/smart-tourism#Restaurant> .
+<http://example.org/smart-tourism#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/smart-tourism#Transport> .
+<http://example.org/smart-tourism#Location> <http://www.w3.org/2000/01/rdf-schema#comment> "Class representing location."@en .
+<http://example.org/smart-tourism#Location> <http://www.w3.org/2000/01/rdf-schema#label> "Location"@en .
+# 
+# http://example.org/smart-tourism#LodgingType
+<http://example.org/smart-tourism#LodgingType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/smart-tourism#LodgingType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/smart-tourism#Hotel> .
+<http://example.org/smart-tourism#LodgingType> <http://www.w3.org/2000/01/rdf-schema#comment> "Class representing lodgingtype."@en .
+<http://example.org/smart-tourism#LodgingType> <http://www.w3.org/2000/01/rdf-schema#label> "LodgingType"@en .
+# 
+# http://example.org/smart-tourism#PriceRange
+<http://example.org/smart-tourism#PriceRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/smart-tourism#PriceRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/smart-tourism#Attraction> .
+<http://example.org/smart-tourism#PriceRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/smart-tourism#Event> .
+<http://example.org/smart-tourism#PriceRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/smart-tourism#Hotel> .
+<http://example.org/smart-tourism#PriceRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/smart-tourism#Restaurant> .
+<http://example.org/smart-tourism#PriceRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/smart-tourism#Transport> .
+<http://example.org/smart-tourism#PriceRange> <http://www.w3.org/2000/01/rdf-schema#comment> "Class representing pricerange."@en .
+<http://example.org/smart-tourism#PriceRange> <http://www.w3.org/2000/01/rdf-schema#label> "PriceRange"@en .
+# 
+# http://example.org/smart-tourism#Rating
+<http://example.org/smart-tourism#Rating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/smart-tourism#Rating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/smart-tourism#Attraction> .
+<http://example.org/smart-tourism#Rating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/smart-tourism#Hotel> .
+<http://example.org/smart-tourism#Rating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/smart-tourism#Restaurant> .
+<http://example.org/smart-tourism#Rating> <http://www.w3.org/2000/01/rdf-schema#comment> "Class representing rating."@en .
+<http://example.org/smart-tourism#Rating> <http://www.w3.org/2000/01/rdf-schema#label> "Rating"@en .
+# 
+# http://example.org/smart-tourism#Recommendation
+<http://example.org/smart-tourism#Recommendation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/smart-tourism#Recommendation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/smart-tourism#Attraction> .
+<http://example.org/smart-tourism#Recommendation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/smart-tourism#Hotel> .
+<http://example.org/smart-tourism#Recommendation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/smart-tourism#Restaurant> .
+<http://example.org/smart-tourism#Recommendation> <http://www.w3.org/2000/01/rdf-schema#comment> "Class representing recommendation."@en .
+<http://example.org/smart-tourism#Recommendation> <http://www.w3.org/2000/01/rdf-schema#label> "Recommendation"@en .
+# 
+# http://example.org/smart-tourism#Restaurant
+<http://example.org/smart-tourism#Restaurant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/smart-tourism#Restaurant> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.org/smart-tourism#CuisineType> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.co-ode.org/ontologies/ont.owl#hasCuisineType> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/smart-tourism#Restaurant> <http://www.w3.org/2000/01/rdf-schema#comment> "Class representing restaurant."@en .
+<http://example.org/smart-tourism#Restaurant> <http://www.w3.org/2000/01/rdf-schema#label> "Restaurant"@en .
+# 
+# http://example.org/smart-tourism#StarRating
+<http://example.org/smart-tourism#StarRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/smart-tourism#StarRating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/smart-tourism#Hotel> .
+<http://example.org/smart-tourism#StarRating> <http://www.w3.org/2000/01/rdf-schema#comment> "Class representing starrating."@en .
+<http://example.org/smart-tourism#StarRating> <http://www.w3.org/2000/01/rdf-schema#label> "StarRating"@en .
+# 
+# http://example.org/smart-tourism#TouristPlace
+<http://example.org/smart-tourism#TouristPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/smart-tourism#TouristPlace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/smart-tourism#Attraction> .
+<http://example.org/smart-tourism#TouristPlace> <http://www.w3.org/2000/01/rdf-schema#comment> "Class representing touristplace."@en .
+<http://example.org/smart-tourism#TouristPlace> <http://www.w3.org/2000/01/rdf-schema#label> "TouristPlace"@en .
+# 
+# http://example.org/smart-tourism#Transport
+<http://example.org/smart-tourism#Transport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/smart-tourism#Transport> <http://www.w3.org/2000/01/rdf-schema#comment> "Class representing transport."@en .
+<http://example.org/smart-tourism#Transport> <http://www.w3.org/2000/01/rdf-schema#label> "Transport"@en .
+# 
+# http://example.org/smart-tourism#TransportCompany
+<http://example.org/smart-tourism#TransportCompany> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/smart-tourism#TransportCompany> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/smart-tourism#Transport> .
+<http://example.org/smart-tourism#TransportCompany> <http://www.w3.org/2000/01/rdf-schema#comment> "Class representing transportcompany."@en .
+<http://example.org/smart-tourism#TransportCompany> <http://www.w3.org/2000/01/rdf-schema#label> "TransportCompany"@en .
+# 
+# http://example.org/smart-tourism#TransportType
+<http://example.org/smart-tourism#TransportType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/smart-tourism#TransportType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/smart-tourism#Transport> .
+<http://example.org/smart-tourism#TransportType> <http://www.w3.org/2000/01/rdf-schema#comment> "Class representing transporttype."@en .
+<http://example.org/smart-tourism#TransportType> <http://www.w3.org/2000/01/rdf-schema#label> "TransportType"@en .
+# 
+# http://example.org/smart-tourism#Visitor
+<http://example.org/smart-tourism#Visitor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/smart-tourism#Visitor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/smart-tourism#Attraction> .
+<http://example.org/smart-tourism#Visitor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/smart-tourism#City> .
+<http://example.org/smart-tourism#Visitor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/smart-tourism#Hotel> .
+<http://example.org/smart-tourism#Visitor> <http://www.w3.org/2000/01/rdf-schema#comment> "Class representing visitor."@en .
+<http://example.org/smart-tourism#Visitor> <http://www.w3.org/2000/01/rdf-schema#label> "Visitor"@en .
+# 
+# http://www.co-ode.org/ontologies/ont.owl#EventInCity
+<http://www.co-ode.org/ontologies/ont.owl#EventInCity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.co-ode.org/ontologies/ont.owl#EventInCity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/smart-tourism#Event> .
+# 
+# http://www.co-ode.org/ontologies/ont.owl#ItalianRestaurant
+<http://www.co-ode.org/ontologies/ont.owl#ItalianRestaurant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.co-ode.org/ontologies/ont.owl#ItalianRestaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/smart-tourism#CuisineType> .
+<http://www.co-ode.org/ontologies/ont.owl#ItalianRestaurant> <http://www.w3.org/2000/01/rdf-schema#comment> "Class representing Italian cousin." .
+<http://www.co-ode.org/ontologies/ont.owl#ItalianRestaurant> <http://www.w3.org/2000/01/rdf-schema#label> "ItalianRestaurant" .
+# 
+# http://www.co-ode.org/ontologies/ont.owl#RecommendedHotel
+<http://www.co-ode.org/ontologies/ont.owl#RecommendedHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.co-ode.org/ontologies/ont.owl#RecommendedHotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/smart-tourism#Hotel> .
+<http://www.co-ode.org/ontologies/ont.owl#RecommendedHotel> <http://www.w3.org/2000/01/rdf-schema#comment> "Class Representing Recommended Hotels" .
+<http://www.co-ode.org/ontologies/ont.owl#RecommendedHotel> <http://www.w3.org/2000/01/rdf-schema#label> "RecommendedHotel" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://dbpedia.org/resource/Hotel
+<http://dbpedia.org/resource/Hotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://dbpedia.org/resource/Hotel> <http://www.w3.org/2002/07/owl#sameAs> <http://example.org/smart-tourism#HotelAlcazar> .
+# 
+# http://example.org/smart-tourism#HotelAlcazar
+# 
+# http://dbpedia.org/resource/Medieval_festival
+<http://dbpedia.org/resource/Medieval_festival> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://dbpedia.org/resource/Medieval_festival> <http://www.w3.org/2002/07/owl#sameAs> <http://example.org/smart-tourism#FestivalMedieval> .
+# 
+# http://example.org/smart-tourism#FestivalMedieval
+# 
+# http://dbpedia.org/resource/Toledo,_Spain
+<http://dbpedia.org/resource/Toledo,_Spain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://dbpedia.org/resource/Toledo,_Spain> <http://www.w3.org/2002/07/owl#sameAs> <http://example.org/smart-tourism#Toledo> .
+# 
+# http://example.org/smart-tourism#Toledo
+# 
+# http://example.org/smart-tourism#FestivalMedieval
+<http://example.org/smart-tourism#FestivalMedieval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/smart-tourism#FestivalMedieval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/smart-tourism#Event> .
+<http://example.org/smart-tourism#FestivalMedieval> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance of Event."@en .
+<http://example.org/smart-tourism#FestivalMedieval> <http://www.w3.org/2000/01/rdf-schema#label> "FestivalMedieval"@en .
+# 
+# http://example.org/smart-tourism#HotelAlcazar
+<http://example.org/smart-tourism#HotelAlcazar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/smart-tourism#HotelAlcazar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/smart-tourism#Hotel> .
+<http://example.org/smart-tourism#HotelAlcazar> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance of Hotel."@en .
+<http://example.org/smart-tourism#HotelAlcazar> <http://www.w3.org/2000/01/rdf-schema#label> "HotelAlcazar"@en .
+# 
+# http://example.org/smart-tourism#MuseoDelGreco
+<http://example.org/smart-tourism#MuseoDelGreco> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/smart-tourism#MuseoDelGreco> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/smart-tourism#Attraction> .
+<http://example.org/smart-tourism#MuseoDelGreco> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance of Attraction."@en .
+<http://example.org/smart-tourism#MuseoDelGreco> <http://www.w3.org/2000/01/rdf-schema#label> "MuseoDelGreco"@en .
+# 
+# http://example.org/smart-tourism#RestauranteSol
+<http://example.org/smart-tourism#RestauranteSol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/smart-tourism#RestauranteSol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/smart-tourism#Restaurant> .
+<http://example.org/smart-tourism#RestauranteSol> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance of Restaurant."@en .
+<http://example.org/smart-tourism#RestauranteSol> <http://www.w3.org/2000/01/rdf-schema#label> "RestauranteSol"@en .
+# 
+# http://example.org/smart-tourism#Toledo
+<http://example.org/smart-tourism#Toledo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/smart-tourism#Toledo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/smart-tourism#City> .
+<http://example.org/smart-tourism#Toledo> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance of City."@en .
+<http://example.org/smart-tourism#Toledo> <http://www.w3.org/2000/01/rdf-schema#label> "Toledo"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://www.w3.org/2002/07/owl#Thing> <http://www.w3.org/2000/01/rdf-schema#comment> "Esta ontología modela información relacionada con eventos turísticos, hoteles, atracciones y restaurantes en distintas ciudades. Su objetivo de carácter didáctico es representar de manera estructurada los datos necesarios para sistemas de recomendación en el ámbito del turismo inteligente como parte del trabajo del alumno Javier Caño García en la asignatura Representación del conocimiento." .
+<http://www.w3.org/2002/07/owl#Thing> <http://www.w3.org/2000/01/rdf-schema#label> "SmartTourismRecommendationOntology" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Rules
+# #
+# #################################################################
+# 
+# 
+<http://www.w3.org/2002/07/e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.w3.org/2002/07/c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.w3.org/2002/07/h> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.w3.org/2002/07/r> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.w3.org/2002/07/ct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:genid12 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid12 <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+_:genid12 <http://www.w3.org/2000/01/rdf-schema#label> "S1" .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid12 <http://www.w3.org/2003/11/swrl#body> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid14 .
+_:genid14 <http://www.w3.org/2003/11/swrl#arguments> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "4.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2002/07/r> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> .
+<http://www.w3.org/2003/11/swrlb#greaterThan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Builtin> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid18 .
+_:genid18 <http://www.w3.org/2003/11/swrl#argument2> <http://www.w3.org/2002/07/r> .
+_:genid18 <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/h> .
+_:genid18 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/smart-tourism#hasRating> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid20 .
+_:genid20 <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/h> .
+_:genid20 <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/smart-tourism#Hotel> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid12 <http://www.w3.org/2003/11/swrl#head> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid22 .
+_:genid22 <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/h> .
+_:genid22 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.co-ode.org/ontologies/ont.owl#RecommendedHotel> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid23 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid23 <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+_:genid23 <http://www.w3.org/2000/01/rdf-schema#label> "S2" .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid23 <http://www.w3.org/2003/11/swrl#body> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid25 .
+_:genid25 <http://www.w3.org/2003/11/swrl#arguments> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "Italian" .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2002/07/ct> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#contains> .
+<http://www.w3.org/2003/11/swrlb#contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Builtin> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid29 .
+_:genid29 <http://www.w3.org/2003/11/swrl#argument2> <http://www.w3.org/2002/07/ct> .
+_:genid29 <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/r> .
+_:genid29 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.co-ode.org/ontologies/ont.owl#hasCuisineType> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid31 .
+_:genid31 <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/r> .
+_:genid31 <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/smart-tourism#Restaurant> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid23 <http://www.w3.org/2003/11/swrl#head> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid33 .
+_:genid33 <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/r> .
+_:genid33 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.co-ode.org/ontologies/ont.owl#ItalianRestaurant> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid3 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid3 <http://www.w3.org/2000/01/rdf-schema#comment> "Event In City" .
+_:genid3 <http://www.w3.org/2000/01/rdf-schema#label> "S3" .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid3 <http://www.w3.org/2003/11/swrl#body> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid5 .
+_:genid5 <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/c> .
+_:genid5 <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/smart-tourism#City> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid7 .
+_:genid7 <http://www.w3.org/2003/11/swrl#argument2> <http://www.w3.org/2002/07/c> .
+_:genid7 <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/e> .
+_:genid7 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/smart-tourism#locatedIn> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid9 .
+_:genid9 <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/e> .
+_:genid9 <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/smart-tourism#Event> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid3 <http://www.w3.org/2003/11/swrl#head> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid11 .
+_:genid11 <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/e> .
+_:genid11 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.co-ode.org/ontologies/ont.owl#EventInCity> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

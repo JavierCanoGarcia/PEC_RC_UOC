@@ -1,0 +1,776 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <Ontology>
+        <rdfs:comment>Esta ontología modela información relacionada con eventos turísticos, hoteles, atracciones y restaurantes en distintas ciudades. Su objetivo de carácter didáctico es representar de manera estructurada los datos necesarios para sistemas de recomendación en el ámbito del turismo inteligente como parte del trabajo del alumno Javier Caño García en la asignatura Representación del conocimiento.</rdfs:comment>
+        <rdfs:label>SmartTourismRecommendationOntology</rdfs:label>
+    </Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+
+    <AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/smart-tourism#hasAttraction -->
+
+
+    <ObjectProperty rdf:about="http://example.org/smart-tourism#hasAttraction">
+        <rdfs:domain rdf:resource="http://example.org/smart-tourism#City"/>
+        <rdfs:range rdf:resource="http://example.org/smart-tourism#Attraction"/>
+        <rdfs:comment xml:lang="en">Indicates that a city has an attraction.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasAttraction</rdfs:label>
+    </ObjectProperty>
+    
+
+
+    <!-- http://example.org/smart-tourism#locatedIn -->
+
+
+    <ObjectProperty rdf:about="http://example.org/smart-tourism#locatedIn">
+        <rdfs:domain rdf:resource="http://example.org/smart-tourism#Hotel"/>
+        <rdfs:range rdf:resource="http://example.org/smart-tourism#City"/>
+        <rdfs:comment xml:lang="en">Indicates that an entity is located in a city.</rdfs:comment>
+        <rdfs:label xml:lang="en">locatedIn</rdfs:label>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasCuisineType -->
+
+
+    <ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasCuisineType">
+        <rdfs:domain rdf:resource="http://example.org/smart-tourism#Restaurant"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/smart-tourism#hasPricePerNight -->
+
+
+    <DatatypeProperty rdf:about="http://example.org/smart-tourism#hasPricePerNight">
+        <rdfs:domain rdf:resource="http://example.org/smart-tourism#Hotel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">Price per night for a hotel.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasPricePerNight</rdfs:label>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://example.org/smart-tourism#hasRating -->
+
+
+    <DatatypeProperty rdf:about="http://example.org/smart-tourism#hasRating">
+        <rdfs:domain rdf:resource="http://example.org/smart-tourism#Hotel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">The rating of a hotel.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasRating</rdfs:label>
+    </DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/smart-tourism#Accommodation -->
+
+
+    <Class rdf:about="http://example.org/smart-tourism#Accommodation">
+        <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#Hotel"/>
+        <rdfs:comment xml:lang="en">Class representing accommodation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Accommodation</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://example.org/smart-tourism#Attraction -->
+
+
+    <Class rdf:about="http://example.org/smart-tourism#Attraction">
+        <rdfs:comment xml:lang="en">Class representing attraction.</rdfs:comment>
+        <rdfs:label xml:lang="en">Attraction</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://example.org/smart-tourism#City -->
+
+
+    <Class rdf:about="http://example.org/smart-tourism#City">
+        <rdfs:comment xml:lang="en">Class representing city.</rdfs:comment>
+        <rdfs:label xml:lang="en">City</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://example.org/smart-tourism#CuisineType -->
+
+
+    <Class rdf:about="http://example.org/smart-tourism#CuisineType">
+        <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#Restaurant"/>
+        <rdfs:comment xml:lang="en">Class representing cuisinetype.</rdfs:comment>
+        <rdfs:label xml:lang="en">CuisineType</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://example.org/smart-tourism#Date -->
+
+
+    <Class rdf:about="http://example.org/smart-tourism#Date">
+        <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#Event"/>
+        <rdfs:comment xml:lang="en">Class representing date.</rdfs:comment>
+        <rdfs:label xml:lang="en">Date</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://example.org/smart-tourism#Distance -->
+
+
+    <Class rdf:about="http://example.org/smart-tourism#Distance">
+        <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#Transport"/>
+        <rdfs:comment xml:lang="en">Class representing distance.</rdfs:comment>
+        <rdfs:label xml:lang="en">Distance</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://example.org/smart-tourism#Event -->
+
+
+    <Class rdf:about="http://example.org/smart-tourism#Event">
+        <rdfs:comment xml:lang="en">Class representing event.</rdfs:comment>
+        <rdfs:label xml:lang="en">Event</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://example.org/smart-tourism#EventType -->
+
+
+    <Class rdf:about="http://example.org/smart-tourism#EventType">
+        <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#Event"/>
+        <rdfs:comment xml:lang="en">Class representing eventtype.</rdfs:comment>
+        <rdfs:label xml:lang="en">EventType</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://example.org/smart-tourism#FoodEstablishment -->
+
+
+    <Class rdf:about="http://example.org/smart-tourism#FoodEstablishment">
+        <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#Hotel"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#Restaurant"/>
+        <rdfs:comment xml:lang="en">Class representing foodestablishment.</rdfs:comment>
+        <rdfs:label xml:lang="en">FoodEstablishment</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://example.org/smart-tourism#Hotel -->
+
+
+    <Class rdf:about="http://example.org/smart-tourism#Hotel">
+        <rdfs:comment xml:lang="en">Class representing hotel.</rdfs:comment>
+        <rdfs:label xml:lang="en">Hotel</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://example.org/smart-tourism#Location -->
+
+
+    <Class rdf:about="http://example.org/smart-tourism#Location">
+        <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#Attraction"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#City"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#Event"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#Hotel"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#Restaurant"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#Transport"/>
+        <rdfs:comment xml:lang="en">Class representing location.</rdfs:comment>
+        <rdfs:label xml:lang="en">Location</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://example.org/smart-tourism#LodgingType -->
+
+
+    <Class rdf:about="http://example.org/smart-tourism#LodgingType">
+        <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#Hotel"/>
+        <rdfs:comment xml:lang="en">Class representing lodgingtype.</rdfs:comment>
+        <rdfs:label xml:lang="en">LodgingType</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://example.org/smart-tourism#PriceRange -->
+
+
+    <Class rdf:about="http://example.org/smart-tourism#PriceRange">
+        <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#Attraction"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#Event"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#Hotel"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#Restaurant"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#Transport"/>
+        <rdfs:comment xml:lang="en">Class representing pricerange.</rdfs:comment>
+        <rdfs:label xml:lang="en">PriceRange</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://example.org/smart-tourism#Rating -->
+
+
+    <Class rdf:about="http://example.org/smart-tourism#Rating">
+        <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#Attraction"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#Hotel"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#Restaurant"/>
+        <rdfs:comment xml:lang="en">Class representing rating.</rdfs:comment>
+        <rdfs:label xml:lang="en">Rating</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://example.org/smart-tourism#Recommendation -->
+
+
+    <Class rdf:about="http://example.org/smart-tourism#Recommendation">
+        <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#Attraction"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#Hotel"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#Restaurant"/>
+        <rdfs:comment xml:lang="en">Class representing recommendation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Recommendation</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://example.org/smart-tourism#Restaurant -->
+
+
+    <Class rdf:about="http://example.org/smart-tourism#Restaurant">
+        <equivalentClass>
+            <Restriction>
+                <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hasCuisineType"/>
+                <someValuesFrom rdf:resource="http://example.org/smart-tourism#CuisineType"/>
+            </Restriction>
+        </equivalentClass>
+        <rdfs:comment xml:lang="en">Class representing restaurant.</rdfs:comment>
+        <rdfs:label xml:lang="en">Restaurant</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://example.org/smart-tourism#StarRating -->
+
+
+    <Class rdf:about="http://example.org/smart-tourism#StarRating">
+        <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#Hotel"/>
+        <rdfs:comment xml:lang="en">Class representing starrating.</rdfs:comment>
+        <rdfs:label xml:lang="en">StarRating</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://example.org/smart-tourism#TouristPlace -->
+
+
+    <Class rdf:about="http://example.org/smart-tourism#TouristPlace">
+        <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#Attraction"/>
+        <rdfs:comment xml:lang="en">Class representing touristplace.</rdfs:comment>
+        <rdfs:label xml:lang="en">TouristPlace</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://example.org/smart-tourism#Transport -->
+
+
+    <Class rdf:about="http://example.org/smart-tourism#Transport">
+        <rdfs:comment xml:lang="en">Class representing transport.</rdfs:comment>
+        <rdfs:label xml:lang="en">Transport</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://example.org/smart-tourism#TransportCompany -->
+
+
+    <Class rdf:about="http://example.org/smart-tourism#TransportCompany">
+        <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#Transport"/>
+        <rdfs:comment xml:lang="en">Class representing transportcompany.</rdfs:comment>
+        <rdfs:label xml:lang="en">TransportCompany</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://example.org/smart-tourism#TransportType -->
+
+
+    <Class rdf:about="http://example.org/smart-tourism#TransportType">
+        <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#Transport"/>
+        <rdfs:comment xml:lang="en">Class representing transporttype.</rdfs:comment>
+        <rdfs:label xml:lang="en">TransportType</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://example.org/smart-tourism#Visitor -->
+
+
+    <Class rdf:about="http://example.org/smart-tourism#Visitor">
+        <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#Attraction"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#City"/>
+        <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#Hotel"/>
+        <rdfs:comment xml:lang="en">Class representing visitor.</rdfs:comment>
+        <rdfs:label xml:lang="en">Visitor</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#EventInCity -->
+
+
+    <Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#EventInCity">
+        <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#Event"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ItalianRestaurant -->
+
+
+    <Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#ItalianRestaurant">
+        <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#CuisineType"/>
+        <rdfs:comment>Class representing Italian cousin.</rdfs:comment>
+        <rdfs:label>ItalianRestaurant</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#RecommendedHotel -->
+
+
+    <Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#RecommendedHotel">
+        <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#Hotel"/>
+        <rdfs:comment>Class Representing Recommended Hotels</rdfs:comment>
+        <rdfs:label>RecommendedHotel</rdfs:label>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://dbpedia.org/resource/Hotel -->
+
+
+    <NamedIndividual rdf:about="http://dbpedia.org/resource/Hotel">
+        <sameAs rdf:resource="http://example.org/smart-tourism#HotelAlcazar"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/smart-tourism#HotelAlcazar -->
+
+
+    <rdf:Description rdf:about="http://example.org/smart-tourism#HotelAlcazar"/>
+    
+
+
+    <!-- http://dbpedia.org/resource/Medieval_festival -->
+
+
+    <NamedIndividual rdf:about="http://dbpedia.org/resource/Medieval_festival">
+        <sameAs rdf:resource="http://example.org/smart-tourism#FestivalMedieval"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/smart-tourism#FestivalMedieval -->
+
+
+    <rdf:Description rdf:about="http://example.org/smart-tourism#FestivalMedieval"/>
+    
+
+
+    <!-- http://dbpedia.org/resource/Toledo,_Spain -->
+
+
+    <NamedIndividual rdf:about="http://dbpedia.org/resource/Toledo,_Spain">
+        <sameAs rdf:resource="http://example.org/smart-tourism#Toledo"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/smart-tourism#Toledo -->
+
+
+    <rdf:Description rdf:about="http://example.org/smart-tourism#Toledo"/>
+    
+
+
+    <!-- http://example.org/smart-tourism#FestivalMedieval -->
+
+
+    <NamedIndividual rdf:about="http://example.org/smart-tourism#FestivalMedieval">
+        <rdf:type rdf:resource="http://example.org/smart-tourism#Event"/>
+        <rdfs:comment xml:lang="en">Instance of Event.</rdfs:comment>
+        <rdfs:label xml:lang="en">FestivalMedieval</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/smart-tourism#HotelAlcazar -->
+
+
+    <NamedIndividual rdf:about="http://example.org/smart-tourism#HotelAlcazar">
+        <rdf:type rdf:resource="http://example.org/smart-tourism#Hotel"/>
+        <rdfs:comment xml:lang="en">Instance of Hotel.</rdfs:comment>
+        <rdfs:label xml:lang="en">HotelAlcazar</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/smart-tourism#MuseoDelGreco -->
+
+
+    <NamedIndividual rdf:about="http://example.org/smart-tourism#MuseoDelGreco">
+        <rdf:type rdf:resource="http://example.org/smart-tourism#Attraction"/>
+        <rdfs:comment xml:lang="en">Instance of Attraction.</rdfs:comment>
+        <rdfs:label xml:lang="en">MuseoDelGreco</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/smart-tourism#RestauranteSol -->
+
+
+    <NamedIndividual rdf:about="http://example.org/smart-tourism#RestauranteSol">
+        <rdf:type rdf:resource="http://example.org/smart-tourism#Restaurant"/>
+        <rdfs:comment xml:lang="en">Instance of Restaurant.</rdfs:comment>
+        <rdfs:label xml:lang="en">RestauranteSol</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/smart-tourism#Toledo -->
+
+
+    <NamedIndividual rdf:about="http://example.org/smart-tourism#Toledo">
+        <rdf:type rdf:resource="http://example.org/smart-tourism#City"/>
+        <rdfs:comment xml:lang="en">Instance of City.</rdfs:comment>
+        <rdfs:label xml:lang="en">Toledo</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+        <rdfs:comment>Esta ontología modela información relacionada con eventos turísticos, hoteles, atracciones y restaurantes en distintas ciudades. Su objetivo de carácter didáctico es representar de manera estructurada los datos necesarios para sistemas de recomendación en el ámbito del turismo inteligente como parte del trabajo del alumno Javier Caño García en la asignatura Representación del conocimiento.</rdfs:comment>
+        <rdfs:label>SmartTourismRecommendationOntology</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/e">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/c">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/h">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/r">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/ct">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://example.org/smart-tourism#Hotel"/>
+                        <swrl:argument1 rdf:resource="http://www.w3.org/2002/07/h"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://example.org/smart-tourism#hasRating"/>
+                                <swrl:argument1 rdf:resource="http://www.w3.org/2002/07/h"/>
+                                <swrl:argument2 rdf:resource="http://www.w3.org/2002/07/r"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.w3.org/2002/07/r"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.co-ode.org/ontologies/ont.owl#RecommendedHotel"/>
+                        <swrl:argument1 rdf:resource="http://www.w3.org/2002/07/h"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://example.org/smart-tourism#Restaurant"/>
+                        <swrl:argument1 rdf:resource="http://www.w3.org/2002/07/r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hasCuisineType"/>
+                                <swrl:argument1 rdf:resource="http://www.w3.org/2002/07/r"/>
+                                <swrl:argument2 rdf:resource="http://www.w3.org/2002/07/ct"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#contains"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.w3.org/2002/07/ct"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first>Italian</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.co-ode.org/ontologies/ont.owl#ItalianRestaurant"/>
+                        <swrl:argument1 rdf:resource="http://www.w3.org/2002/07/r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Event In City</rdfs:comment>
+        <rdfs:label>S3</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://example.org/smart-tourism#Event"/>
+                        <swrl:argument1 rdf:resource="http://www.w3.org/2002/07/e"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://example.org/smart-tourism#locatedIn"/>
+                                <swrl:argument1 rdf:resource="http://www.w3.org/2002/07/e"/>
+                                <swrl:argument2 rdf:resource="http://www.w3.org/2002/07/c"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://example.org/smart-tourism#City"/>
+                                        <swrl:argument1 rdf:resource="http://www.w3.org/2002/07/c"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.co-ode.org/ontologies/ont.owl#EventInCity"/>
+                        <swrl:argument1 rdf:resource="http://www.w3.org/2002/07/e"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
