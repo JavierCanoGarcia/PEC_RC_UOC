@@ -2,13 +2,33 @@
   "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
   "header" : {
     "languages" : [ "en", "undefined" ],
-    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://example.org/smart-tourism", "http://www.co-ode.org/ontologies/ont.owl", "http://www.w3.org/2001/XMLSchema" ],
-    "iri" : "No IRI set",
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://example.org/smart-tourism", "http://www.co-ode.org/ontologies/ont.owl", "http://www.w3.org/2001/XMLSchema", "http://www.w3.org/2003/11/swrl", "https://raw.githubusercontent.com/JavierCanoGarcia/PEC_RC_UOC/refs/heads/main/PEC2.owl", "http://swrl.stanford.edu/ontologies/3.3/swrla.owl" ],
+    "title" : {
+      "undefined" : "SmartTourismRecommendationOntology"
+    },
+    "iri" : "https://raw.githubusercontent.com/JavierCanoGarcia/PEC_RC_UOC/refs/heads/main/PEC2.owl",
+    "description" : {
+      "undefined" : "Esta ontología modela información relacionada con eventos turísticos, hoteles, atracciones y restaurantes en distintas ciudades. Su objetivo de carácter didáctico es representar de manera estructurada los datos necesarios para sistemas de recomendación en el ámbito del turismo inteligente como parte del trabajo del alumno Javier Caño García en la asignatura Representación del conocimiento."
+    },
     "labels" : {
       "undefined" : "SmartTourismRecommendationOntology"
     },
     "comments" : {
       "undefined" : "Esta ontología modela información relacionada con eventos turísticos, hoteles, atracciones y restaurantes en distintas ciudades. Su objetivo de carácter didáctico es representar de manera estructurada los datos necesarios para sistemas de recomendación en el ámbito del turismo inteligente como parte del trabajo del alumno Javier Caño García en la asignatura Representación del conocimiento."
+    },
+    "other" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "Javier Caño García",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "SmartTourismRecommendationOntology",
+        "type" : "label"
+      } ]
     }
   },
   "namespace" : [ ],
@@ -16,102 +36,118 @@
     "id" : "0",
     "type" : "owl:Class"
   }, {
-    "id" : "6",
-    "type" : "owl:Class"
-  }, {
-    "id" : "9",
-    "type" : "owl:Class"
-  }, {
     "id" : "8",
     "type" : "owl:Class"
   }, {
-    "id" : "13",
+    "id" : "11",
     "type" : "owl:Class"
   }, {
-    "id" : "14",
-    "type" : "owl:Class"
-  }, {
-    "id" : "2",
-    "type" : "owl:Class"
-  }, {
-    "id" : "24",
-    "type" : "owl:Class"
-  }, {
-    "id" : "30",
-    "type" : "owl:Class"
-  }, {
-    "id" : "16",
-    "type" : "owl:Class"
-  }, {
-    "id" : "3",
-    "type" : "owl:Class"
-  }, {
-    "id" : "34",
-    "type" : "owl:Class"
-  }, {
-    "id" : "43",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "45",
-    "type" : "owl:Thing"
-  }, {
-    "id" : "5",
-    "type" : "owl:Class"
-  }, {
-    "id" : "29",
-    "type" : "owl:Class"
-  }, {
-    "id" : "35",
-    "type" : "owl:Class"
-  }, {
-    "id" : "27",
-    "type" : "owl:Class"
-  }, {
-    "id" : "23",
-    "type" : "owl:Class"
-  }, {
-    "id" : "50",
-    "type" : "owl:Class"
-  }, {
-    "id" : "57",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "52",
+    "id" : "17",
     "type" : "owl:Class"
   }, {
     "id" : "10",
     "type" : "owl:Class"
   }, {
-    "id" : "4",
+    "id" : "36",
     "type" : "owl:Class"
   }, {
-    "id" : "1",
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "51",
     "type" : "owl:Class"
   }, {
     "id" : "54",
     "type" : "owl:Class"
   }, {
-    "id" : "20",
+    "id" : "30",
     "type" : "owl:Class"
   }, {
-    "id" : "12",
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "66",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "64",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "67",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "83",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "84",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "82",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "13",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "81",
+    "type" : "owl:Class"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
-    "iri" : "http://example.org/smart-tourism#PriceRange",
-    "baseIri" : "http://example.org/smart-tourism",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "PriceRange",
-      "en" : "PriceRange"
-    },
-    "comment" : {
-      "en" : "Class representing pricerange."
-    },
-    "attributes" : [ "external" ],
-    "id" : "0",
-    "superClasses" : [ "1", "2", "3", "4", "5" ]
-  }, {
     "iri" : "http://example.org/smart-tourism#TransportCompany",
     "baseIri" : "http://example.org/smart-tourism",
     "instances" : 0,
@@ -123,8 +159,8 @@
       "en" : "Class representing transportcompany."
     },
     "attributes" : [ "external" ],
-    "id" : "6",
-    "superClasses" : [ "4" ]
+    "id" : "0",
+    "superClasses" : [ "1" ]
   }, {
     "iri" : "http://example.org/smart-tourism#Rating",
     "baseIri" : "http://example.org/smart-tourism",
@@ -137,8 +173,8 @@
       "en" : "Class representing rating."
     },
     "attributes" : [ "external" ],
-    "id" : "9",
-    "superClasses" : [ "1", "2", "3" ]
+    "id" : "8",
+    "superClasses" : [ "9", "10", "7" ]
   }, {
     "iri" : "http://example.org/smart-tourism#Visitor",
     "baseIri" : "http://example.org/smart-tourism",
@@ -151,22 +187,8 @@
       "en" : "Class representing visitor."
     },
     "attributes" : [ "external" ],
-    "id" : "8",
-    "superClasses" : [ "1", "2", "10" ]
-  }, {
-    "iri" : "http://www.co-ode.org/ontologies/ont.owl#RecommendedHotel",
-    "baseIri" : "http://www.co-ode.org/ontologies/ont.owl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "RecommendedHotel",
-      "undefined" : "RecommendedHotel"
-    },
-    "comment" : {
-      "undefined" : "Class Representing Recommended Hotels"
-    },
-    "attributes" : [ "external" ],
-    "id" : "13",
-    "superClasses" : [ "1" ]
+    "id" : "11",
+    "superClasses" : [ "9", "10", "4" ]
   }, {
     "iri" : "http://example.org/smart-tourism#TouristPlace",
     "baseIri" : "http://example.org/smart-tourism",
@@ -179,8 +201,8 @@
       "en" : "Class representing touristplace."
     },
     "attributes" : [ "external" ],
-    "id" : "14",
-    "superClasses" : [ "2" ]
+    "id" : "17",
+    "superClasses" : [ "10" ]
   }, {
     "iri" : "http://example.org/smart-tourism#Attraction",
     "baseIri" : "http://example.org/smart-tourism",
@@ -200,26 +222,12 @@
         "en" : "MuseoDelGreco"
       }
     } ],
-    "subClasses" : [ "0", "16", "14", "9", "12", "8" ],
+    "subClasses" : [ "23", "3", "17", "8", "24", "11" ],
     "comment" : {
       "en" : "Class representing attraction."
     },
     "attributes" : [ "external" ],
-    "id" : "2"
-  }, {
-    "iri" : "http://example.org/smart-tourism#Date",
-    "baseIri" : "http://example.org/smart-tourism",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Date",
-      "en" : "Date"
-    },
-    "comment" : {
-      "en" : "Class representing date."
-    },
-    "attributes" : [ "external" ],
-    "id" : "24",
-    "superClasses" : [ "5" ]
+    "id" : "10"
   }, {
     "iri" : "http://example.org/smart-tourism#LodgingType",
     "baseIri" : "http://example.org/smart-tourism",
@@ -232,22 +240,8 @@
       "en" : "Class representing lodgingtype."
     },
     "attributes" : [ "external" ],
-    "id" : "30",
-    "superClasses" : [ "1" ]
-  }, {
-    "iri" : "http://example.org/smart-tourism#Location",
-    "baseIri" : "http://example.org/smart-tourism",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Location",
-      "en" : "Location"
-    },
-    "comment" : {
-      "en" : "Class representing location."
-    },
-    "attributes" : [ "external" ],
-    "id" : "16",
-    "superClasses" : [ "1", "3", "2", "4", "10", "5" ]
+    "id" : "36",
+    "superClasses" : [ "9" ]
   }, {
     "iri" : "http://example.org/smart-tourism#Restaurant",
     "baseIri" : "http://example.org/smart-tourism",
@@ -267,12 +261,12 @@
         "en" : "RestauranteSol"
       }
     } ],
-    "subClasses" : [ "0", "16", "9", "12", "34", "35" ],
+    "subClasses" : [ "23", "3", "8", "24", "35", "6" ],
     "comment" : {
       "en" : "Class representing restaurant."
     },
     "attributes" : [ "external" ],
-    "id" : "3"
+    "id" : "7"
   }, {
     "iri" : "http://example.org/smart-tourism#FoodEstablishment",
     "baseIri" : "http://example.org/smart-tourism",
@@ -285,21 +279,21 @@
       "en" : "Class representing foodestablishment."
     },
     "attributes" : [ "external" ],
-    "id" : "34",
-    "superClasses" : [ "1", "3" ]
+    "id" : "35",
+    "superClasses" : [ "9", "7" ]
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#float",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "43",
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "22",
     "label" : {
-      "IRI-based" : "float"
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
     }
   }, {
-    "iri" : "http://www.w3.org/2002/07/owl#Thing",
-    "baseIri" : "http://owl2vowl.de",
-    "id" : "45",
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "47",
     "label" : {
-      "undefined" : "Thing"
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
     }
   }, {
     "iri" : "http://example.org/smart-tourism#Event",
@@ -320,12 +314,12 @@
         "en" : "FestivalMedieval"
       }
     } ],
-    "subClasses" : [ "0", "16", "50", "52", "24" ],
+    "subClasses" : [ "23", "3", "30", "28", "19" ],
     "comment" : {
       "en" : "Class representing event."
     },
     "attributes" : [ "external" ],
-    "id" : "5"
+    "id" : "20"
   }, {
     "iri" : "http://example.org/smart-tourism#TransportType",
     "baseIri" : "http://example.org/smart-tourism",
@@ -338,23 +332,8 @@
       "en" : "Class representing transporttype."
     },
     "attributes" : [ "external" ],
-    "id" : "29",
-    "superClasses" : [ "4" ]
-  }, {
-    "iri" : "http://example.org/smart-tourism#CuisineType",
-    "baseIri" : "http://example.org/smart-tourism",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "CuisineType",
-      "en" : "CuisineType"
-    },
-    "subClasses" : [ "54" ],
-    "comment" : {
-      "en" : "Class representing cuisinetype."
-    },
-    "attributes" : [ "external" ],
-    "id" : "35",
-    "superClasses" : [ "3" ]
+    "id" : "50",
+    "superClasses" : [ "1" ]
   }, {
     "iri" : "http://example.org/smart-tourism#Accommodation",
     "baseIri" : "http://example.org/smart-tourism",
@@ -367,8 +346,8 @@
       "en" : "Class representing accommodation."
     },
     "attributes" : [ "external" ],
-    "id" : "27",
-    "superClasses" : [ "1" ]
+    "id" : "51",
+    "superClasses" : [ "9" ]
   }, {
     "iri" : "http://example.org/smart-tourism#Distance",
     "baseIri" : "http://example.org/smart-tourism",
@@ -381,8 +360,8 @@
       "en" : "Class representing distance."
     },
     "attributes" : [ "external" ],
-    "id" : "23",
-    "superClasses" : [ "4" ]
+    "id" : "54",
+    "superClasses" : [ "1" ]
   }, {
     "iri" : "http://example.org/smart-tourism#EventType",
     "baseIri" : "http://example.org/smart-tourism",
@@ -395,25 +374,183 @@
       "en" : "Class representing eventtype."
     },
     "attributes" : [ "external" ],
-    "id" : "50",
-    "superClasses" : [ "5" ]
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#float",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "57",
-    "label" : {
-      "IRI-based" : "float"
-    }
+    "id" : "30",
+    "superClasses" : [ "20" ]
   }, {
     "iri" : "http://www.co-ode.org/ontologies/ont.owl#EventInCity",
     "baseIri" : "http://www.co-ode.org/ontologies/ont.owl",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "EventInCity"
+      "IRI-based" : "EventInCity",
+      "undefined" : "Event in city"
+    },
+    "comment" : {
+      "undefined" : "Represents events happening in a specific city"
     },
     "attributes" : [ "external" ],
-    "id" : "52",
-    "superClasses" : [ "5" ]
+    "id" : "28",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#Entity",
+    "baseIri" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Entity"
+    },
+    "subClasses" : [ "67" ],
+    "attributes" : [ "external" ],
+    "id" : "66"
+  }, {
+    "iri" : "http://example.org/smart-tourism#Transport",
+    "baseIri" : "http://example.org/smart-tourism",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Transport",
+      "en" : "Transport"
+    },
+    "subClasses" : [ "23", "3", "0", "54", "50" ],
+    "comment" : {
+      "en" : "Class representing transport."
+    },
+    "attributes" : [ "external" ],
+    "id" : "1"
+  }, {
+    "iri" : "http://example.org/smart-tourism#PriceRange",
+    "baseIri" : "http://example.org/smart-tourism",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PriceRange",
+      "en" : "PriceRange"
+    },
+    "comment" : {
+      "en" : "Class representing pricerange."
+    },
+    "attributes" : [ "external" ],
+    "id" : "23",
+    "superClasses" : [ "9", "7", "10", "1", "20" ]
+  }, {
+    "iri" : "http://www.co-ode.org/ontologies/ont.owl#RecommendedHotel",
+    "baseIri" : "http://www.co-ode.org/ontologies/ont.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RecommendedHotel",
+      "undefined" : "RecommendedHotel"
+    },
+    "comment" : {
+      "undefined" : "Class Representing Recommended Hotels"
+    },
+    "attributes" : [ "external" ],
+    "id" : "64",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://example.org/smart-tourism#Date",
+    "baseIri" : "http://example.org/smart-tourism",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Date",
+      "en" : "Date"
+    },
+    "comment" : {
+      "en" : "Class representing date."
+    },
+    "attributes" : [ "external" ],
+    "id" : "19",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#RuleGroup",
+    "baseIri" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RuleGroup"
+    },
+    "attributes" : [ "external" ],
+    "id" : "67",
+    "superClasses" : [ "66" ]
+  }, {
+    "iri" : "http://example.org/smart-tourism#Location",
+    "baseIri" : "http://example.org/smart-tourism",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Location",
+      "en" : "Location"
+    },
+    "comment" : {
+      "en" : "Class representing location."
+    },
+    "attributes" : [ "external" ],
+    "id" : "3",
+    "superClasses" : [ "9", "7", "10", "1", "4", "20" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "53",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "83",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "84",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "82",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "13",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "38",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "69",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://example.org/smart-tourism#CuisineType",
+    "baseIri" : "http://example.org/smart-tourism",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CuisineType",
+      "en" : "CuisineType"
+    },
+    "subClasses" : [ "16" ],
+    "comment" : {
+      "en" : "Class representing cuisinetype."
+    },
+    "attributes" : [ "external" ],
+    "id" : "6",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "14",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
   }, {
     "iri" : "http://example.org/smart-tourism#City",
     "baseIri" : "http://example.org/smart-tourism",
@@ -433,23 +570,9 @@
         "en" : "Toledo"
       }
     } ],
-    "subClasses" : [ "16", "8" ],
+    "subClasses" : [ "3", "11" ],
     "comment" : {
       "en" : "Class representing city."
-    },
-    "attributes" : [ "external" ],
-    "id" : "10"
-  }, {
-    "iri" : "http://example.org/smart-tourism#Transport",
-    "baseIri" : "http://example.org/smart-tourism",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Transport",
-      "en" : "Transport"
-    },
-    "subClasses" : [ "0", "16", "6", "23", "29" ],
-    "comment" : {
-      "en" : "Class representing transport."
     },
     "attributes" : [ "external" ],
     "id" : "4"
@@ -472,12 +595,12 @@
         "en" : "HotelAlcazar"
       }
     } ],
-    "subClasses" : [ "27", "0", "16", "13", "20", "9", "12", "8", "34", "30" ],
+    "subClasses" : [ "51", "23", "3", "64", "60", "8", "24", "11", "35", "36" ],
     "comment" : {
       "en" : "Class representing hotel."
     },
     "attributes" : [ "external" ],
-    "id" : "1"
+    "id" : "9"
   }, {
     "iri" : "http://www.co-ode.org/ontologies/ont.owl#ItalianRestaurant",
     "baseIri" : "http://www.co-ode.org/ontologies/ont.owl",
@@ -490,8 +613,17 @@
       "undefined" : "Class representing Italian cousin."
     },
     "attributes" : [ "external" ],
-    "id" : "54",
-    "superClasses" : [ "35" ]
+    "id" : "16",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://www.w3.org/2003/11/swrl#Imp",
+    "baseIri" : "http://www.w3.org/2003/11/swrl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Imp"
+    },
+    "attributes" : [ "external" ],
+    "id" : "81"
   }, {
     "iri" : "http://example.org/smart-tourism#StarRating",
     "baseIri" : "http://example.org/smart-tourism",
@@ -504,8 +636,8 @@
       "en" : "Class representing starrating."
     },
     "attributes" : [ "external" ],
-    "id" : "20",
-    "superClasses" : [ "1" ]
+    "id" : "60",
+    "superClasses" : [ "9" ]
   }, {
     "iri" : "http://example.org/smart-tourism#Recommendation",
     "baseIri" : "http://example.org/smart-tourism",
@@ -518,33 +650,27 @@
       "en" : "Class representing recommendation."
     },
     "attributes" : [ "external" ],
-    "id" : "12",
-    "superClasses" : [ "1", "2", "3" ]
+    "id" : "24",
+    "superClasses" : [ "9", "7", "10" ]
   } ],
   "property" : [ {
-    "id" : "7",
+    "id" : "2",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "11",
-    "type" : "rdfs:SubClassOf"
+    "id" : "5",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "12",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "15",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "17",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "18",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "19",
-    "type" : "rdfs:SubClassOf"
-  }, {
     "id" : "21",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "22",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "25",
     "type" : "rdfs:SubClassOf"
@@ -552,7 +678,10 @@
     "id" : "26",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "28",
+    "id" : "27",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "29",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "31",
@@ -564,14 +693,11 @@
     "id" : "33",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "36",
+    "id" : "34",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "37",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "38",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "39",
     "type" : "rdfs:SubClassOf"
@@ -585,40 +711,40 @@
     "id" : "42",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "44",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "46",
+    "id" : "43",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "47",
+    "id" : "44",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "46",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "48",
     "type" : "owl:objectProperty"
   }, {
     "id" : "49",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
-    "id" : "51",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "53",
-    "type" : "rdfs:SubClassOf"
+    "id" : "52",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "55",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "56",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "57",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "58",
-    "type" : "owl:someValuesFrom"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "59",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "60",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "61",
@@ -630,271 +756,445 @@
     "id" : "63",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "64",
-    "type" : "owl:objectProperty"
-  }, {
     "id" : "65",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "66",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "67",
-    "type" : "rdfs:SubClassOf"
-  }, {
     "id" : "68",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "70",
     "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "71",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "72",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "75",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "78",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "79",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "80",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "85",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "86",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "87",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "88",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "89",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "90",
+    "type" : "owl:datatypeProperty"
   } ],
   "propertyAttribute" : [ {
-    "range" : "1",
-    "domain" : "8",
+    "range" : "4",
+    "domain" : "3",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "7"
+    "id" : "2"
   }, {
-    "range" : "1",
-    "domain" : "12",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "11"
+    "iri" : "https://raw.githubusercontent.com/JavierCanoGarcia/PEC_RC_UOC/refs/heads/main/PEC2.owl#isCuisineOf",
+    "baseIri" : "https://raw.githubusercontent.com/JavierCanoGarcia/PEC_RC_UOC/refs/heads/main/PEC2.owl",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "isCuisineOf",
+      "undefined" : "isCuisineOf"
+    },
+    "domain" : "6",
+    "comment" : {
+      "undefined" : "Indiates a restaurant Is of a type of cuisine"
+    },
+    "attributes" : [ "object" ],
+    "id" : "5"
   }, {
-    "range" : "1",
-    "domain" : "9",
+    "iri" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasPropertyPhrase",
+    "baseIri" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "hasPropertyPhrase"
+    },
+    "domain" : "13",
+    "attributes" : [ "datatype", "external", "functional" ],
+    "id" : "12"
+  }, {
+    "range" : "6",
+    "domain" : "16",
     "attributes" : [ "anonymous", "object" ],
     "id" : "15"
   }, {
-    "range" : "1",
-    "domain" : "16",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "17"
-  }, {
-    "range" : "1",
-    "domain" : "0",
+    "range" : "20",
+    "domain" : "19",
     "attributes" : [ "anonymous", "object" ],
     "id" : "18"
   }, {
-    "range" : "1",
-    "domain" : "20",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "19"
-  }, {
-    "range" : "1",
+    "iri" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasClassPhrase",
+    "baseIri" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "hasClassPhrase"
+    },
     "domain" : "13",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "datatype", "external", "functional" ],
     "id" : "21"
   }, {
-    "range" : "4",
-    "domain" : "23",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "22"
-  }, {
-    "range" : "4",
-    "domain" : "6",
+    "range" : "20",
+    "domain" : "3",
     "attributes" : [ "anonymous", "object" ],
     "id" : "25"
   }, {
-    "range" : "1",
-    "domain" : "27",
+    "range" : "20",
+    "domain" : "23",
     "attributes" : [ "anonymous", "object" ],
     "id" : "26"
   }, {
-    "range" : "4",
-    "domain" : "29",
+    "range" : "20",
+    "domain" : "28",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "28"
+    "id" : "27"
   }, {
-    "range" : "4",
-    "domain" : "0",
+    "range" : "20",
+    "domain" : "30",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "29"
+  }, {
+    "range" : "7",
+    "domain" : "24",
     "attributes" : [ "anonymous", "object" ],
     "id" : "31"
   }, {
-    "range" : "10",
+    "range" : "7",
     "domain" : "8",
     "attributes" : [ "anonymous", "object" ],
     "id" : "32"
   }, {
-    "range" : "4",
-    "domain" : "16",
+    "range" : "7",
+    "domain" : "6",
     "attributes" : [ "anonymous", "object" ],
     "id" : "33"
   }, {
-    "range" : "2",
-    "domain" : "12",
+    "range" : "7",
+    "domain" : "35",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "36"
+    "id" : "34"
   }, {
-    "range" : "2",
-    "domain" : "9",
-    "attributes" : [ "anonymous", "object" ],
+    "iri" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasBuiltInPhrase",
+    "baseIri" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "hasBuiltInPhrase"
+    },
+    "domain" : "13",
+    "attributes" : [ "datatype", "external", "functional" ],
     "id" : "37"
   }, {
-    "range" : "10",
-    "domain" : "16",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "38"
-  }, {
-    "range" : "2",
-    "domain" : "8",
+    "range" : "7",
+    "domain" : "23",
     "attributes" : [ "anonymous", "object" ],
     "id" : "39"
   }, {
-    "range" : "2",
-    "domain" : "0",
+    "range" : "10",
+    "domain" : "11",
     "attributes" : [ "anonymous", "object" ],
     "id" : "40"
   }, {
-    "range" : "2",
-    "domain" : "14",
+    "range" : "7",
+    "domain" : "3",
     "attributes" : [ "anonymous", "object" ],
     "id" : "41"
   }, {
-    "range" : "2",
-    "domain" : "16",
+    "range" : "10",
+    "domain" : "17",
     "attributes" : [ "anonymous", "object" ],
     "id" : "42"
   }, {
-    "iri" : "http://www.co-ode.org/ontologies/ont.owl#hasCuisineType",
-    "baseIri" : "http://www.co-ode.org/ontologies/ont.owl",
-    "range" : "45",
-    "label" : {
-      "IRI-based" : "hasCuisineType"
-    },
+    "range" : "10",
     "domain" : "3",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "43"
+  }, {
+    "range" : "10",
+    "domain" : "24",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "44"
   }, {
-    "range" : "5",
-    "domain" : "0",
+    "range" : "10",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "45"
+  }, {
+    "range" : "10",
+    "domain" : "23",
     "attributes" : [ "anonymous", "object" ],
     "id" : "46"
   }, {
-    "range" : "5",
-    "domain" : "16",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "47"
-  }, {
-    "iri" : "http://example.org/smart-tourism#locatedIn",
-    "baseIri" : "http://example.org/smart-tourism",
-    "range" : "10",
+    "iri" : "https://raw.githubusercontent.com/JavierCanoGarcia/PEC_RC_UOC/refs/heads/main/PEC2.owl#hasEvent",
+    "baseIri" : "https://raw.githubusercontent.com/JavierCanoGarcia/PEC_RC_UOC/refs/heads/main/PEC2.owl",
+    "range" : "20",
     "label" : {
-      "IRI-based" : "locatedIn",
-      "en" : "locatedIn"
+      "IRI-based" : "hasEvent",
+      "undefined" : "hasEvent"
     },
-    "domain" : "1",
+    "domain" : "4",
     "comment" : {
-      "en" : "Indicates that an entity is located in a city."
+      "undefined" : "Indicates a city has an event"
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object" ],
     "id" : "48"
   }, {
-    "range" : "5",
-    "domain" : "50",
-    "attributes" : [ "anonymous", "object" ],
+    "iri" : "http://www.co-ode.org/ontologies/ont.owl#hasCuisineType",
+    "inverse" : "5",
+    "baseIri" : "http://www.co-ode.org/ontologies/ont.owl",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "hasCuisineType",
+      "undefined" : "hasCuisineType"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "Indicates a Restaurant has a cuisine type"
+    },
+    "attributes" : [ "object", "external" ],
     "id" : "49"
-  }, {
-    "range" : "5",
-    "domain" : "52",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "51"
-  }, {
-    "range" : "5",
-    "domain" : "24",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "53"
-  }, {
-    "range" : "35",
-    "domain" : "54",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "55"
   }, {
     "iri" : "http://example.org/smart-tourism#hasPricePerNight",
     "baseIri" : "http://example.org/smart-tourism",
-    "range" : "57",
+    "range" : "53",
     "label" : {
       "IRI-based" : "hasPricePerNight",
       "en" : "hasPricePerNight"
     },
-    "domain" : "1",
+    "domain" : "9",
     "comment" : {
       "en" : "Price per night for a hotel."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
+    "id" : "52"
+  }, {
+    "range" : "9",
+    "domain" : "36",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "55"
+  }, {
+    "range" : "9",
+    "domain" : "35",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "56"
   }, {
-    "iri" : "http://www.co-ode.org/ontologies/ont.owl#hasCuisineType",
-    "baseIri" : "http://www.co-ode.org/ontologies/ont.owl",
-    "range" : "35",
+    "iri" : "https://raw.githubusercontent.com/JavierCanoGarcia/PEC_RC_UOC/refs/heads/main/PEC2.owl#usesTransport",
+    "baseIri" : "https://raw.githubusercontent.com/JavierCanoGarcia/PEC_RC_UOC/refs/heads/main/PEC2.owl",
+    "range" : "1",
     "label" : {
-      "IRI-based" : "hasCuisineType"
+      "IRI-based" : "usesTransport",
+      "undefined" : "usesTransport"
     },
-    "domain" : "3",
-    "attributes" : [ "external", "someValues", "object" ],
+    "domain" : "11",
+    "comment" : {
+      "undefined" : "Indicates a Tourist uses a Transport"
+    },
+    "attributes" : [ "object" ],
+    "id" : "57"
+  }, {
+    "range" : "9",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "58"
   }, {
-    "iri" : "http://example.org/smart-tourism#hasRating",
-    "baseIri" : "http://example.org/smart-tourism",
-    "range" : "43",
-    "label" : {
-      "IRI-based" : "hasRating",
-      "en" : "hasRating"
-    },
-    "domain" : "1",
-    "comment" : {
-      "en" : "The rating of a hotel."
-    },
-    "attributes" : [ "external", "datatype" ],
+    "range" : "9",
+    "domain" : "60",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "59"
   }, {
-    "range" : "3",
-    "domain" : "12",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "60"
-  }, {
-    "range" : "3",
-    "domain" : "9",
+    "range" : "9",
+    "domain" : "11",
     "attributes" : [ "anonymous", "object" ],
     "id" : "61"
   }, {
-    "range" : "3",
-    "domain" : "35",
+    "range" : "9",
+    "domain" : "24",
     "attributes" : [ "anonymous", "object" ],
     "id" : "62"
   }, {
-    "range" : "3",
-    "domain" : "34",
+    "range" : "9",
+    "domain" : "64",
     "attributes" : [ "anonymous", "object" ],
     "id" : "63"
   }, {
+    "range" : "9",
+    "domain" : "3",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "65"
+  }, {
+    "iri" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasRuleCategory",
+    "baseIri" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl",
+    "range" : "69",
+    "label" : {
+      "IRI-based" : "hasRuleCategory"
+    },
+    "domain" : "13",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "68"
+  }, {
+    "range" : "9",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "70"
+  }, {
+    "range" : "1",
+    "domain" : "54",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "71"
+  }, {
+    "range" : "1",
+    "domain" : "0",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "72"
+  }, {
+    "range" : "9",
+    "domain" : "51",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "73"
+  }, {
+    "range" : "1",
+    "domain" : "50",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "74"
+  }, {
     "iri" : "http://example.org/smart-tourism#hasAttraction",
     "baseIri" : "http://example.org/smart-tourism",
-    "range" : "2",
+    "range" : "10",
     "label" : {
       "IRI-based" : "hasAttraction",
       "en" : "hasAttraction"
     },
-    "domain" : "10",
+    "domain" : "4",
     "comment" : {
       "en" : "Indicates that a city has an attraction."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "64"
+    "attributes" : [ "object", "external" ],
+    "id" : "75"
+  }, {
+    "range" : "66",
+    "domain" : "67",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "76"
+  }, {
+    "range" : "4",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "77"
   }, {
     "range" : "1",
-    "domain" : "30",
+    "domain" : "3",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "65"
+    "id" : "78"
   }, {
     "range" : "1",
-    "domain" : "34",
+    "domain" : "23",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "66"
+    "id" : "79"
   }, {
-    "range" : "3",
-    "domain" : "16",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "67"
+    "iri" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasRuleGroup",
+    "baseIri" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl",
+    "range" : "82",
+    "label" : {
+      "IRI-based" : "hasRuleGroup"
+    },
+    "domain" : "81",
+    "attributes" : [ "object", "external" ],
+    "id" : "80"
   }, {
-    "range" : "3",
-    "domain" : "0",
+    "iri" : "http://example.org/smart-tourism#locatedIn",
+    "baseIri" : "http://example.org/smart-tourism",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "locatedIn",
+      "en" : "locatedIn"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Indicates that an entity is located in a city."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "85"
+  }, {
+    "range" : "1",
+    "domain" : "6",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "68"
+    "id" : "86"
+  }, {
+    "iri" : "http://www.co-ode.org/ontologies/ont.owl#hasCuisineType",
+    "inverse" : "5",
+    "baseIri" : "http://www.co-ode.org/ontologies/ont.owl",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "hasCuisineType",
+      "undefined" : "hasCuisineType"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "Indicates a Restaurant has a cuisine type"
+    },
+    "attributes" : [ "someValues", "object", "external" ],
+    "id" : "87"
+  }, {
+    "iri" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled",
+    "baseIri" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "isRuleEnabled"
+    },
+    "domain" : "81",
+    "attributes" : [ "datatype", "external", "functional" ],
+    "id" : "88"
+  }, {
+    "iri" : "http://example.org/smart-tourism#hasRating",
+    "baseIri" : "http://example.org/smart-tourism",
+    "range" : "83",
+    "label" : {
+      "IRI-based" : "hasRating",
+      "en" : "hasRating"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "The rating of a hotel."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "89"
+  }, {
+    "iri" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleGroupEnabled",
+    "baseIri" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl",
+    "range" : "84",
+    "label" : {
+      "IRI-based" : "isRuleGroupEnabled"
+    },
+    "domain" : "67",
+    "attributes" : [ "datatype", "external", "functional" ],
+    "id" : "90"
   } ]
 }

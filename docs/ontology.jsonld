@@ -1,14 +1,14 @@
 [ {
   "@id" : "_:genid1",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Esta ontología modela información relacionada con eventos turísticos, hoteles, atracciones y restaurantes en distintas ciudades. Su objetivo de carácter didáctico es representar de manera estructurada los datos necesarios para sistemas de recomendación en el ámbito del turismo inteligente como parte del trabajo del alumno Javier Caño García en la asignatura Representación del conocimiento."
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.co-ode.org/ontologies/ont.owl#hasCuisineType"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "SmartTourismRecommendationOntology"
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://example.org/smart-tourism#CuisineType"
   } ]
 }, {
-  "@id" : "_:genid11",
+  "@id" : "_:genid10",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "http://www.w3.org/2002/07/e"
@@ -17,7 +17,7 @@
     "@id" : "http://www.co-ode.org/ontologies/ont.owl#EventInCity"
   } ]
 }, {
-  "@id" : "_:genid12",
+  "@id" : "_:genid11",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
   "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -31,20 +31,20 @@
   } ],
   "http://www.w3.org/2003/11/swrl#body" : [ {
     "@list" : [ {
-      "@id" : "_:genid20"
+      "@id" : "_:genid19"
     }, {
-      "@id" : "_:genid18"
+      "@id" : "_:genid17"
     }, {
-      "@id" : "_:genid14"
+      "@id" : "_:genid13"
     } ]
   } ],
   "http://www.w3.org/2003/11/swrl#head" : [ {
     "@list" : [ {
-      "@id" : "_:genid22"
+      "@id" : "_:genid21"
     } ]
   } ]
 }, {
-  "@id" : "_:genid14",
+  "@id" : "_:genid13",
   "@type" : [ "http://www.w3.org/2003/11/swrl#BuiltinAtom" ],
   "http://www.w3.org/2003/11/swrl#arguments" : [ {
     "@list" : [ {
@@ -58,7 +58,7 @@
     "@id" : "http://www.w3.org/2003/11/swrlb#greaterThan"
   } ]
 }, {
-  "@id" : "_:genid18",
+  "@id" : "_:genid17",
   "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "http://www.w3.org/2002/07/h"
@@ -70,16 +70,7 @@
     "@id" : "http://example.org/smart-tourism#hasRating"
   } ]
 }, {
-  "@id" : "_:genid2",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.co-ode.org/ontologies/ont.owl#hasCuisineType"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://example.org/smart-tourism#CuisineType"
-  } ]
-}, {
-  "@id" : "_:genid20",
+  "@id" : "_:genid19",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "http://www.w3.org/2002/07/h"
@@ -88,68 +79,7 @@
     "@id" : "http://example.org/smart-tourism#Hotel"
   } ]
 }, {
-  "@id" : "_:genid22",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
-  "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "http://www.w3.org/2002/07/h"
-  } ],
-  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
-    "@id" : "http://www.co-ode.org/ontologies/ont.owl#RecommendedHotel"
-  } ]
-}, {
-  "@id" : "_:genid23",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
-  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "true"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : ""
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "S2"
-  } ],
-  "http://www.w3.org/2003/11/swrl#body" : [ {
-    "@list" : [ {
-      "@id" : "_:genid31"
-    }, {
-      "@id" : "_:genid29"
-    }, {
-      "@id" : "_:genid25"
-    } ]
-  } ],
-  "http://www.w3.org/2003/11/swrl#head" : [ {
-    "@list" : [ {
-      "@id" : "_:genid33"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid25",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#BuiltinAtom" ],
-  "http://www.w3.org/2003/11/swrl#arguments" : [ {
-    "@list" : [ {
-      "@id" : "http://www.w3.org/2002/07/ct"
-    }, {
-      "@value" : "Italian"
-    } ]
-  } ],
-  "http://www.w3.org/2003/11/swrl#builtin" : [ {
-    "@id" : "http://www.w3.org/2003/11/swrlb#contains"
-  } ]
-}, {
-  "@id" : "_:genid29",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
-  "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "http://www.w3.org/2002/07/r"
-  } ],
-  "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "http://www.w3.org/2002/07/ct"
-  } ],
-  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
-    "@id" : "http://www.co-ode.org/ontologies/ont.owl#hasCuisineType"
-  } ]
-}, {
-  "@id" : "_:genid3",
+  "@id" : "_:genid2",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
   "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -163,20 +93,81 @@
   } ],
   "http://www.w3.org/2003/11/swrl#body" : [ {
     "@list" : [ {
-      "@id" : "_:genid9"
+      "@id" : "_:genid8"
     }, {
-      "@id" : "_:genid7"
+      "@id" : "_:genid6"
     }, {
-      "@id" : "_:genid5"
+      "@id" : "_:genid4"
     } ]
   } ],
   "http://www.w3.org/2003/11/swrl#head" : [ {
     "@list" : [ {
-      "@id" : "_:genid11"
+      "@id" : "_:genid10"
     } ]
   } ]
 }, {
-  "@id" : "_:genid31",
+  "@id" : "_:genid21",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.w3.org/2002/07/h"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.co-ode.org/ontologies/ont.owl#RecommendedHotel"
+  } ]
+}, {
+  "@id" : "_:genid22",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
+  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "S2"
+  } ],
+  "http://www.w3.org/2003/11/swrl#body" : [ {
+    "@list" : [ {
+      "@id" : "_:genid30"
+    }, {
+      "@id" : "_:genid28"
+    }, {
+      "@id" : "_:genid24"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#head" : [ {
+    "@list" : [ {
+      "@id" : "_:genid32"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid24",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#BuiltinAtom" ],
+  "http://www.w3.org/2003/11/swrl#arguments" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/2002/07/ct"
+    }, {
+      "@value" : "Italian"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#builtin" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrlb#contains"
+  } ]
+}, {
+  "@id" : "_:genid28",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.w3.org/2002/07/r"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "http://www.w3.org/2002/07/ct"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.co-ode.org/ontologies/ont.owl#hasCuisineType"
+  } ]
+}, {
+  "@id" : "_:genid30",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "http://www.w3.org/2002/07/r"
@@ -185,7 +176,7 @@
     "@id" : "http://example.org/smart-tourism#Restaurant"
   } ]
 }, {
-  "@id" : "_:genid33",
+  "@id" : "_:genid32",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "http://www.w3.org/2002/07/r"
@@ -194,7 +185,7 @@
     "@id" : "http://www.co-ode.org/ontologies/ont.owl#ItalianRestaurant"
   } ]
 }, {
-  "@id" : "_:genid5",
+  "@id" : "_:genid4",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "http://www.w3.org/2002/07/c"
@@ -203,7 +194,7 @@
     "@id" : "http://example.org/smart-tourism#City"
   } ]
 }, {
-  "@id" : "_:genid7",
+  "@id" : "_:genid6",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "http://www.w3.org/2002/07/e"
@@ -215,7 +206,7 @@
     "@id" : "http://example.org/smart-tourism#locatedIn"
   } ]
 }, {
-  "@id" : "_:genid9",
+  "@id" : "_:genid8",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "http://www.w3.org/2002/07/e"
@@ -290,6 +281,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://example.org/smart-tourism#Restaurant"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://example.org/smart-tourism#Transport"
   } ]
 }, {
   "@id" : "http://example.org/smart-tourism#Date",
@@ -521,7 +515,7 @@
     "@value" : "Restaurant"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid2"
+    "@id" : "_:genid1"
   } ]
 }, {
   "@id" : "http://example.org/smart-tourism#RestauranteSol",
@@ -705,11 +699,80 @@
     "@id" : "http://example.org/smart-tourism#City"
   } ]
 }, {
-  "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled",
+  "@id" : "http://purl.org/dc/terms/creator",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#Entity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#RuleGroup",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#Entity"
+  } ]
+}, {
+  "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasBuiltInPhrase",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasClassPhrase",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasPropertyPhrase",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasRuleCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasRuleGroup",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrl#Imp"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#RuleGroup"
+  } ]
+}, {
+  "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrl#Imp"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleGroupEnabled",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#RuleGroup"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
 }, {
   "@id" : "http://www.co-ode.org/ontologies/ont.owl#EventInCity",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Represents events happening in a specific city"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Event in city"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://example.org/smart-tourism#Event"
   } ]
@@ -740,8 +803,20 @@
 }, {
   "@id" : "http://www.co-ode.org/ontologies/ont.owl#hasCuisineType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates a Restaurant has a cuisine type"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://example.org/smart-tourism#Restaurant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasCuisineType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/smart-tourism#CuisineType"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://raw.githubusercontent.com/JavierCanoGarcia/PEC_RC_UOC/refs/heads/main/PEC2.owl#isCuisineOf"
   } ]
 }, {
   "@id" : "http://www.w3.org/2002/07/c",
@@ -767,9 +842,126 @@
   "@id" : "http://www.w3.org/2002/07/r",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
 }, {
+  "@id" : "http://www.w3.org/2003/11/swrlb#add",
+  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasBuiltInPhrase" : [ {
+    "@value" : "IS SUMMATION OF"
+  } ]
+}, {
   "@id" : "http://www.w3.org/2003/11/swrlb#contains",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Builtin" ]
 }, {
+  "@id" : "http://www.w3.org/2003/11/swrlb#divide",
+  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasBuiltInPhrase" : [ {
+    "@value" : "IS DIVISION OF"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2003/11/swrlb#equal",
+  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasBuiltInPhrase" : [ {
+    "@value" : "IS EQUAL TO"
+  } ]
+}, {
   "@id" : "http://www.w3.org/2003/11/swrlb#greaterThan",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#Builtin" ]
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Builtin" ],
+  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasBuiltInPhrase" : [ {
+    "@value" : "IS GREATER THAN"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2003/11/swrlb#greaterThanOrEqual",
+  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasBuiltInPhrase" : [ {
+    "@value" : "IS GREATER THAN OR EQUAL TO"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2003/11/swrlb#lessThan",
+  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasBuiltInPhrase" : [ {
+    "@value" : "IS LESS THAN"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2003/11/swrlb#lessThanOrEqual",
+  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasBuiltInPhrase" : [ {
+    "@value" : "IS LESS THAN OR EQUAL TO"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2003/11/swrlb#multiply",
+  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasBuiltInPhrase" : [ {
+    "@value" : "IS MULTIPLICATION OF"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2003/11/swrlb#notEqual",
+  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasBuiltInPhrase" : [ {
+    "@value" : "IS NOT EQUAL TO"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2003/11/swrlb#subtract",
+  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasBuiltInPhrase" : [ {
+    "@value" : "IS SUBTRACTION OF"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/JavierCanoGarcia/PEC_RC_UOC/refs/heads/main/PEC2.owl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Esta ontología modela información relacionada con eventos turísticos, hoteles, atracciones y restaurantes en distintas ciudades. Su objetivo de carácter didáctico es representar de manera estructurada los datos necesarios para sistemas de recomendación en el ámbito del turismo inteligente como parte del trabajo del alumno Javier Caño García en la asignatura Representación del conocimiento."
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@value" : "SmartTourismRecommendationOntology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Esta ontología modela información relacionada con eventos turísticos, hoteles, atracciones y restaurantes en distintas ciudades. Su objetivo de carácter didáctico es representar de manera estructurada los datos necesarios para sistemas de recomendación en el ámbito del turismo inteligente como parte del trabajo del alumno Javier Caño García en la asignatura Representación del conocimiento."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "Javier Caño García"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "SmartTourismRecommendationOntology"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://raw.githubusercontent.com/JavierCanoGarcia/PEC_RC_UOC/refs/heads/main/PEC2.owl/1.0.0"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/JavierCanoGarcia/PEC_RC_UOC/refs/heads/main/PEC2.owl#hasEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates a city has an event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/smart-tourism#City"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/smart-tourism#Event"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/JavierCanoGarcia/PEC_RC_UOC/refs/heads/main/PEC2.owl#isCuisineOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indiates a restaurant Is of a type of cuisine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/smart-tourism#CuisineType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "isCuisineOf"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/smart-tourism#Restaurant"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/JavierCanoGarcia/PEC_RC_UOC/refs/heads/main/PEC2.owl#usesTransport",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates a Tourist uses a Transport"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://example.org/smart-tourism#Visitor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "usesTransport"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://example.org/smart-tourism#Transport"
+  } ]
 } ]

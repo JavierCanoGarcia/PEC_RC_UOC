@@ -1,21 +1,63 @@
+@prefix : <https://raw.githubusercontent.com/JavierCanoGarcia/PEC_RC_UOC/refs/heads/main/PEC2.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.w3.org/2002/07/owl#> .
+@base <https://raw.githubusercontent.com/JavierCanoGarcia/PEC_RC_UOC/refs/heads/main/PEC2.owl#> .
 
-[ rdf:type owl:Ontology ;
-   rdfs:comment "Esta ontología modela información relacionada con eventos turísticos, hoteles, atracciones y restaurantes en distintas ciudades. Su objetivo de carácter didáctico es representar de manera estructurada los datos necesarios para sistemas de recomendación en el ámbito del turismo inteligente como parte del trabajo del alumno Javier Caño García en la asignatura Representación del conocimiento." ;
-   rdfs:label "SmartTourismRecommendationOntology"
- ] .
+<https://raw.githubusercontent.com/JavierCanoGarcia/PEC_RC_UOC/refs/heads/main/PEC2.owl> rdf:type owl:Ontology ;
+                                                                                          owl:versionIRI <https://raw.githubusercontent.com/JavierCanoGarcia/PEC_RC_UOC/refs/heads/main/PEC2.owl/1.0.0> ;
+                                                                                          owl:imports <http://swrl.stanford.edu/ontologies/3.3/swrla.owl> ;
+                                                                                          <http://purl.org/dc/terms/description> "Esta ontología modela información relacionada con eventos turísticos, hoteles, atracciones y restaurantes en distintas ciudades. Su objetivo de carácter didáctico es representar de manera estructurada los datos necesarios para sistemas de recomendación en el ámbito del turismo inteligente como parte del trabajo del alumno Javier Caño García en la asignatura Representación del conocimiento." ;
+                                                                                          <http://purl.org/dc/terms/title> "SmartTourismRecommendationOntology" ;
+                                                                                          rdfs:comment "Esta ontología modela información relacionada con eventos turísticos, hoteles, atracciones y restaurantes en distintas ciudades. Su objetivo de carácter didáctico es representar de manera estructurada los datos necesarios para sistemas de recomendación en el ámbito del turismo inteligente como parte del trabajo del alumno Javier Caño García en la asignatura Representación del conocimiento." ;
+                                                                                          rdfs:isDefinedBy "Javier Caño García" ;
+                                                                                          rdfs:label "SmartTourismRecommendationOntology" .
 
 #################################################################
 #    Annotation properties
 #################################################################
 
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasBuiltInPhrase
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasBuiltInPhrase> rdf:type owl:AnnotationProperty ;
+                                                                     rdfs:range xsd:string .
+
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasClassPhrase
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasClassPhrase> rdf:type owl:AnnotationProperty ;
+                                                                   rdfs:range xsd:string .
+
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasPropertyPhrase
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasPropertyPhrase> rdf:type owl:AnnotationProperty ;
+                                                                      rdfs:range xsd:string .
+
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasRuleCategory
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasRuleCategory> rdf:type owl:AnnotationProperty .
+
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasRuleGroup
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasRuleGroup> rdf:type owl:AnnotationProperty ;
+                                                                 rdfs:range <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#RuleGroup> .
+
+
 ###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
-<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty ;
+                                                                  rdfs:range xsd:boolean .
 
 
 #################################################################
@@ -38,9 +80,42 @@
                                              rdfs:label "locatedIn"@en .
 
 
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasRuleGroup
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasRuleGroup> rdf:type owl:ObjectProperty ;
+                                                                 rdfs:domain <http://www.w3.org/2003/11/swrl#Imp> .
+
+
 ###  http://www.co-ode.org/ontologies/ont.owl#hasCuisineType
 <http://www.co-ode.org/ontologies/ont.owl#hasCuisineType> rdf:type owl:ObjectProperty ;
-                                                          rdfs:domain <http://example.org/smart-tourism#Restaurant> .
+                                                          owl:inverseOf :isCuisineOf ;
+                                                          rdfs:domain <http://example.org/smart-tourism#Restaurant> ;
+                                                          rdfs:range <http://example.org/smart-tourism#CuisineType> ;
+                                                          rdfs:comment "Indicates a Restaurant has a cuisine type" ;
+                                                          rdfs:label "hasCuisineType" .
+
+
+###  https://raw.githubusercontent.com/JavierCanoGarcia/PEC_RC_UOC/refs/heads/main/PEC2.owl#hasEvent
+:hasEvent rdf:type owl:ObjectProperty ;
+          rdfs:domain <http://example.org/smart-tourism#City> ;
+          rdfs:range <http://example.org/smart-tourism#Event> ;
+          rdfs:comment "Indicates a city has an event" ;
+          rdfs:label "hasEvent" .
+
+
+###  https://raw.githubusercontent.com/JavierCanoGarcia/PEC_RC_UOC/refs/heads/main/PEC2.owl#isCuisineOf
+:isCuisineOf rdf:type owl:ObjectProperty ;
+             rdfs:domain <http://example.org/smart-tourism#CuisineType> ;
+             rdfs:range <http://example.org/smart-tourism#Restaurant> ;
+             rdfs:comment "Indiates a restaurant Is of a type of cuisine" ;
+             rdfs:label "isCuisineOf" .
+
+
+###  https://raw.githubusercontent.com/JavierCanoGarcia/PEC_RC_UOC/refs/heads/main/PEC2.owl#usesTransport
+:usesTransport rdf:type owl:ObjectProperty ;
+               rdfs:domain <http://example.org/smart-tourism#Visitor> ;
+               rdfs:range <http://example.org/smart-tourism#Transport> ;
+               rdfs:comment "Indicates a Tourist uses a Transport" ;
+               rdfs:label "usesTransport" .
 
 
 #################################################################
@@ -61,6 +136,38 @@
                                              rdfs:range xsd:float ;
                                              rdfs:comment "The rating of a hotel."@en ;
                                              rdfs:label "hasRating"@en .
+
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasBuiltInPhrase
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasBuiltInPhrase> rdf:type owl:DatatypeProperty ,
+                                                                              owl:FunctionalProperty .
+
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasClassPhrase
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasClassPhrase> rdf:type owl:DatatypeProperty ,
+                                                                            owl:FunctionalProperty .
+
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasPropertyPhrase
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasPropertyPhrase> rdf:type owl:DatatypeProperty ,
+                                                                               owl:FunctionalProperty .
+
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasRuleCategory
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasRuleCategory> rdf:type owl:DatatypeProperty .
+
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:DatatypeProperty ,
+                                                                           owl:FunctionalProperty ;
+                                                                  rdfs:domain <http://www.w3.org/2003/11/swrl#Imp> .
+
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleGroupEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleGroupEnabled> rdf:type owl:DatatypeProperty ,
+                                                                                owl:FunctionalProperty ;
+                                                                       rdfs:domain <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#RuleGroup> ;
+                                                                       rdfs:range xsd:boolean .
 
 
 #################################################################
@@ -89,6 +196,7 @@
 ###  http://example.org/smart-tourism#CuisineType
 <http://example.org/smart-tourism#CuisineType> rdf:type owl:Class ;
                                                rdfs:subClassOf <http://example.org/smart-tourism#Restaurant> ;
+                                               owl:disjointWith <http://example.org/smart-tourism#Transport> ;
                                                rdfs:comment "Class representing cuisinetype."@en ;
                                                rdfs:label "CuisineType"@en .
 
@@ -235,9 +343,20 @@
                                            rdfs:label "Visitor"@en .
 
 
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#Entity
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#Entity> rdf:type owl:Class .
+
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#RuleGroup
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#RuleGroup> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#Entity> .
+
+
 ###  http://www.co-ode.org/ontologies/ont.owl#EventInCity
 <http://www.co-ode.org/ontologies/ont.owl#EventInCity> rdf:type owl:Class ;
-                                                       rdfs:subClassOf <http://example.org/smart-tourism#Event> .
+                                                       rdfs:subClassOf <http://example.org/smart-tourism#Event> ;
+                                                       rdfs:comment "Represents events happening in a specific city" ;
+                                                       rdfs:label "Event in city" .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#ItalianRestaurant
@@ -322,6 +441,36 @@ owl:Thing rdfs:comment "Esta ontología modela información relacionada con even
           rdfs:label "SmartTourismRecommendationOntology" .
 
 
+<http://www.w3.org/2003/11/swrlb#add> <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasBuiltInPhrase> "IS SUMMATION OF" .
+
+
+<http://www.w3.org/2003/11/swrlb#divide> <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasBuiltInPhrase> "IS DIVISION OF" .
+
+
+<http://www.w3.org/2003/11/swrlb#equal> <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasBuiltInPhrase> "IS EQUAL TO" .
+
+
+<http://www.w3.org/2003/11/swrlb#greaterThan> <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasBuiltInPhrase> "IS GREATER THAN" .
+
+
+<http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasBuiltInPhrase> "IS GREATER THAN OR EQUAL TO" .
+
+
+<http://www.w3.org/2003/11/swrlb#lessThan> <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasBuiltInPhrase> "IS LESS THAN" .
+
+
+<http://www.w3.org/2003/11/swrlb#lessThanOrEqual> <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasBuiltInPhrase> "IS LESS THAN OR EQUAL TO" .
+
+
+<http://www.w3.org/2003/11/swrlb#multiply> <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasBuiltInPhrase> "IS MULTIPLICATION OF" .
+
+
+<http://www.w3.org/2003/11/swrlb#notEqual> <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasBuiltInPhrase> "IS NOT EQUAL TO" .
+
+
+<http://www.w3.org/2003/11/swrlb#subtract> <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasBuiltInPhrase> "IS SUBTRACTION OF" .
+
+
 #################################################################
 #    Rules
 #################################################################
@@ -376,6 +525,39 @@ owl:Thing rdfs:comment "Esta ontología modela información relacionada con even
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Event In City" ;
+   rdfs:label "S3" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/smart-tourism#Event> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/e>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/smart-tourism#locatedIn> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/e> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.w3.org/2002/07/c>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/smart-tourism#City> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/c>
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.co-ode.org/ontologies/ont.owl#EventInCity> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/e>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
    rdfs:comment "" ;
    rdfs:label "S2" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
@@ -409,39 +591,6 @@ owl:Thing rdfs:comment "Esta ontología modela información relacionada con even
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
                                                        <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.co-ode.org/ontologies/ont.owl#ItalianRestaurant> ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/r>
-                                                     ] ;
-                                           rdf:rest rdf:nil
-                                         ]
- ] .
-
-[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "Event In City" ;
-   rdfs:label "S3" ;
-   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
-   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/smart-tourism#Event> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/e>
-                                                     ] ;
-                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/smart-tourism#locatedIn> ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/e> ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.w3.org/2002/07/c>
-                                                                ] ;
-                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/smart-tourism#City> ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/c>
-                                                                           ] ;
-                                                                 rdf:rest rdf:nil
-                                                               ]
-                                                    ]
-                                         ] ;
-   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.co-ode.org/ontologies/ont.owl#EventInCity> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/e>
                                                      ] ;
                                            rdf:rest rdf:nil
                                          ]
