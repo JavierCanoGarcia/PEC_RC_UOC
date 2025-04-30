@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:dct="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -9,8 +10,13 @@
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
-    <Ontology>
+    <Ontology rdf:about="https://raw.githubusercontent.com/JavierCanoGarcia/PEC_RC_UOC/refs/heads/main/PEC2.owl">
+        <versionIRI rdf:resource="https://raw.githubusercontent.com/JavierCanoGarcia/PEC_RC_UOC/refs/heads/main/PEC2.owl/1.0.0"/>
+        <imports rdf:resource="http://swrl.stanford.edu/ontologies/3.3/swrla.owl"/>
+        <dct:description>Esta ontología modela información relacionada con eventos turísticos, hoteles, atracciones y restaurantes en distintas ciudades. Su objetivo de carácter didáctico es representar de manera estructurada los datos necesarios para sistemas de recomendación en el ámbito del turismo inteligente como parte del trabajo del alumno Javier Caño García en la asignatura Representación del conocimiento.</dct:description>
+        <dct:title>SmartTourismRecommendationOntology</dct:title>
         <rdfs:comment>Esta ontología modela información relacionada con eventos turísticos, hoteles, atracciones y restaurantes en distintas ciudades. Su objetivo de carácter didáctico es representar de manera estructurada los datos necesarios para sistemas de recomendación en el ámbito del turismo inteligente como parte del trabajo del alumno Javier Caño García en la asignatura Representación del conocimiento.</rdfs:comment>
+        <rdfs:isDefinedBy>Javier Caño García</rdfs:isDefinedBy>
         <rdfs:label>SmartTourismRecommendationOntology</rdfs:label>
     </Ontology>
     
@@ -24,6 +30,24 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
     
 
 
@@ -69,7 +93,44 @@
     <!-- http://www.co-ode.org/ontologies/ont.owl#hasCuisineType -->
 
     <ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasCuisineType">
+        <inverseOf rdf:resource="https://raw.githubusercontent.com/JavierCanoGarcia/PEC_RC_UOC/refs/heads/main/PEC2.owl#isCuisineOf"/>
         <rdfs:domain rdf:resource="http://example.org/smart-tourism#Restaurant"/>
+        <rdfs:range rdf:resource="http://example.org/smart-tourism#CuisineType"/>
+        <rdfs:comment>Indicates a Restaurant has a cuisine type</rdfs:comment>
+        <rdfs:label>hasCuisineType</rdfs:label>
+    </ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/JavierCanoGarcia/PEC_RC_UOC/refs/heads/main/PEC2.owl#hasEvent -->
+
+    <ObjectProperty rdf:about="https://raw.githubusercontent.com/JavierCanoGarcia/PEC_RC_UOC/refs/heads/main/PEC2.owl#hasEvent">
+        <rdfs:domain rdf:resource="http://example.org/smart-tourism#City"/>
+        <rdfs:range rdf:resource="http://example.org/smart-tourism#Event"/>
+        <rdfs:comment>Indicates a city has an event</rdfs:comment>
+        <rdfs:label>hasEvent</rdfs:label>
+    </ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/JavierCanoGarcia/PEC_RC_UOC/refs/heads/main/PEC2.owl#isCuisineOf -->
+
+    <ObjectProperty rdf:about="https://raw.githubusercontent.com/JavierCanoGarcia/PEC_RC_UOC/refs/heads/main/PEC2.owl#isCuisineOf">
+        <rdfs:domain rdf:resource="http://example.org/smart-tourism#CuisineType"/>
+        <rdfs:range rdf:resource="http://example.org/smart-tourism#Restaurant"/>
+        <rdfs:comment>Indiates a restaurant Is of a type of cuisine</rdfs:comment>
+        <rdfs:label>isCuisineOf</rdfs:label>
+    </ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/JavierCanoGarcia/PEC_RC_UOC/refs/heads/main/PEC2.owl#usesTransport -->
+
+    <ObjectProperty rdf:about="https://raw.githubusercontent.com/JavierCanoGarcia/PEC_RC_UOC/refs/heads/main/PEC2.owl#usesTransport">
+        <rdfs:domain rdf:resource="http://example.org/smart-tourism#Visitor"/>
+        <rdfs:range rdf:resource="http://example.org/smart-tourism#Transport"/>
+        <rdfs:comment>Indicates a Tourist uses a Transport</rdfs:comment>
+        <rdfs:label>usesTransport</rdfs:label>
     </ObjectProperty>
     
 
@@ -150,6 +211,7 @@
 
     <Class rdf:about="http://example.org/smart-tourism#CuisineType">
         <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#Restaurant"/>
+        <disjointWith rdf:resource="http://example.org/smart-tourism#Transport"/>
         <rdfs:comment xml:lang="en">Class representing cuisinetype.</rdfs:comment>
         <rdfs:label xml:lang="en">CuisineType</rdfs:label>
     </Class>
@@ -358,6 +420,8 @@
 
     <Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#EventInCity">
         <rdfs:subClassOf rdf:resource="http://example.org/smart-tourism#Event"/>
+        <rdfs:comment>Represents events happening in a specific city</rdfs:comment>
+        <rdfs:label>Event in city</rdfs:label>
     </Class>
     
 
@@ -594,6 +658,63 @@
     </rdf:Description>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Event In City</rdfs:comment>
+        <rdfs:label>S3</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://example.org/smart-tourism#Event"/>
+                        <swrl:argument1 rdf:resource="http://www.w3.org/2002/07/e"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://example.org/smart-tourism#locatedIn"/>
+                                <swrl:argument1 rdf:resource="http://www.w3.org/2002/07/e"/>
+                                <swrl:argument2 rdf:resource="http://www.w3.org/2002/07/c"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://example.org/smart-tourism#City"/>
+                                        <swrl:argument1 rdf:resource="http://www.w3.org/2002/07/c"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.co-ode.org/ontologies/ont.owl#EventInCity"/>
+                        <swrl:argument1 rdf:resource="http://www.w3.org/2002/07/e"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment></rdfs:comment>
         <rdfs:label>S2</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
@@ -655,63 +776,6 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate rdf:resource="http://www.co-ode.org/ontologies/ont.owl#ItalianRestaurant"/>
                         <swrl:argument1 rdf:resource="http://www.w3.org/2002/07/r"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment>Event In City</rdfs:comment>
-        <rdfs:label>S3</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://example.org/smart-tourism#Event"/>
-                        <swrl:argument1 rdf:resource="http://www.w3.org/2002/07/e"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://example.org/smart-tourism#locatedIn"/>
-                                <swrl:argument1 rdf:resource="http://www.w3.org/2002/07/e"/>
-                                <swrl:argument2 rdf:resource="http://www.w3.org/2002/07/c"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://example.org/smart-tourism#City"/>
-                                        <swrl:argument1 rdf:resource="http://www.w3.org/2002/07/c"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.co-ode.org/ontologies/ont.owl#EventInCity"/>
-                        <swrl:argument1 rdf:resource="http://www.w3.org/2002/07/e"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
